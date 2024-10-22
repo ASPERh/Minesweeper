@@ -1,0 +1,8 @@
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\bin\Debug\MyMineSweeperSFML.exe.config
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\bin\Debug\MyMineSweeperSFML.exe
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\bin\Debug\MyMineSweeperSFML.pdb
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\obj\Debug\MyMineSweeperSFML.csproj.AssemblyReference.cache
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\obj\Debug\MyMineSweeperSFML.csproj.CoreCompileInputs.cache
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\obj\Debug\MyMineSweeperSFML.csproj.CopyComplete
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\obj\Debug\MyMineSweeperSFML.exe
+C:\Users\ASPER\source\repos\MyMineSweeperSFML\MyMineSweeperSFML\obj\Debug\MyMineSweeperSFML.pdb
