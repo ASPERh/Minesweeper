@@ -10,34 +10,55 @@ using SFML.Graphics;
 using System.Net.Http.Headers;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Runtime;
 
 namespace MyMineSweeper
 {
     internal class Program
     {
         static Music m = new Music("orchestral.ogg");
-        static List<RectangleShape> c = new List<RectangleShape>();
-
+        static List<RectangleShape> cc = new List<RectangleShape>();
+        static RectangleShape selShape;
         static void Main(string[] args)
         {
-            RenderWindow w = new RenderWindow(new VideoMode(400, 400), "Game");
+
+            Settings settings = Settings.GetInstance();
+            if (!settings.showNewGame())
+                return;
+            int row = settings.NumRows;
+            int col = settings.NumColuns;
+            int mines = settings.NumMines;
+            int size = 20;
+            uint rui = (uint)(row * size);
+            uint cui = (uint)(col * size);
+
+
+            RenderWindow w = new RenderWindow(new VideoMode(rui, cui), "Game", Styles.Close);
             w.Closed += W_Closed;
-            c.Add(new RectangleShape(new Vector2f(50f, 50f)));
-            c.Add(new RectangleShape(new Vector2f(50f, 50f)));
-            foreach (RectangleShape r in c)
+            RectangleShape template = new RectangleShape(new Vector2f(20f, 20f));
+            template.FillColor = Color.Blue;
+            template.OutlineThickness = 1;
+            template.OutlineColor = Color.White;
+
+            for (int r = 0; r < row; r++)
             {
-                r.FillColor = Color.Blue;
-                r.OutlineThickness = 2;
-                r.OutlineColor = Color.Red;
+                for (int c = 0; c < col; c++)
+                {
+                    RectangleShape rs = new RectangleShape(template);
+                    rs.Position = new Vector2f(20f * r, 20f * c);
+                    cc.Add(rs);
+                }
             }
 
 
+
             w.MouseButtonPressed += W_MouseButtonPressed;
+            w.MouseEntered += W_MouseEntered; ;
             while (w.IsOpen)
             {
-
+                w.Clear();
                 w.DispatchEvents();
-                foreach (RectangleShape r in c)
+                foreach (RectangleShape r in cc)
                 {
                     w.Draw(r);
                 }
@@ -46,11 +67,47 @@ namespace MyMineSweeper
             }
         }
 
+        private static void W_MouseEntered(object sender, EventArgs e)
+        {
+            Window w = (Window)sender;
+
+            foreach (RectangleShape r in cc)
+            {
+
+                if (r.GetGlobalBounds().Contains(new Vector2f(Mouse.GetPosition().X, Mouse.GetPosition().Y)))
+                {
+                    r.FillColor = Color.Yellow;
+                }
+            }
+
+        }
         private static void W_MouseButtonPressed(object sender, MouseButtonEventArgs e)
         {
+            foreach (RectangleShape r in cc)
+            {
+                if (r.GetGlobalBounds().Contains(new Vector2f(e.X, e.Y)))
+                {
+                    if (Mouse.IsButtonPressed(Mouse.Button.Left) && Mouse.IsButtonPressed(Mouse.Button.Right))
+                    {
+                        r.FillColor = Color.Yellow;
+
+                    }
+                    else if (e.Button == Mouse.Button.Left)
+                    {
+                        r.FillColor = Color.Cyan;
+                    }
+                    else if (e.Button == Mouse.Button.Right)
+                    {
+                        r.FillColor = Color.Red;
+                    }
+
+                }
+            }
+
 
             if (e.Button == Mouse.Button.Left)
             {
+
                 m.Play();
             }
             else

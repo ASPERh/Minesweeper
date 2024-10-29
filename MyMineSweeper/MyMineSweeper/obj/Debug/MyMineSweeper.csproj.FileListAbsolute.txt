@@ -6,3 +6,11 @@ C:\Users\ASPER\source\repos\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.
 C:\Users\ASPER\source\repos\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.csproj.CopyComplete
 C:\Users\ASPER\source\repos\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.exe
 C:\Users\ASPER\source\repos\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.pdb
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\bin\Debug\MyMineSweeper.exe.config
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\bin\Debug\MyMineSweeper.exe
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\bin\Debug\MyMineSweeper.pdb
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.csproj.AssemblyReference.cache
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.csproj.CoreCompileInputs.cache
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.csproj.CopyComplete
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.exe
+C:\Users\ASPER\source\repos\MyMineSweeper\Minesweeper\MyMineSweeper\MyMineSweeper\obj\Debug\MyMineSweeper.pdb
